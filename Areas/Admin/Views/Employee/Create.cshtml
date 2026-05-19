@@ -1,0 +1,45 @@
+﻿@using MyProject18._05._2026.Areas.Admin.ViewModels
+@model EmployeeCreate
+
+<div class="card">
+    <div class="card-header">Yeni İşçi Əlavə Et</div>
+    <div class="card-body">
+        <form asp-controller="Employee" asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="form-label">Ad</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Surname" class="form-label">Soyad</label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Age" class="form-label">Yaş</label>
+                <input asp-for="Age" type="number" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Position" class="form-label">Vəzifə</label>
+                <input asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="RangeId" class="form-label">Range Seçin</label>
+                    <input asp-for="RangeId" class="form-control" />
+                <span asp-validation-for="RangeId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Yadda Saxla</button>
+            <a asp-action="Index" class="btn btn-secondary">Geri Dön</a>
+        </form>
+    </div>
+</div>
+

@@ -12,8 +12,8 @@ using MyProject18._05._2026.DAL;
 namespace MyProject18._05._2026.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260518082818_newdb")]
-    partial class newdb
+    [Migration("20260519081617_NewDb")]
+    partial class NewDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,9 @@ namespace MyProject18._05._2026.Migrations
 
                     b.Property<int>("Age")
                         .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

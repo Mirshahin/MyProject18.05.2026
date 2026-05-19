@@ -1,4 +1,6 @@
-﻿namespace MyProject18._05._2026.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace MyProject18._05._2026.Models
 {
     public class Employee : BaseEntity
     {
@@ -7,5 +9,8 @@
         public int Age { get; set; }
         public string Position { get; set; }
         public Range Range { get; set; }
+        public string? ImageUrl { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
     }
 }

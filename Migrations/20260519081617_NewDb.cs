@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MyProject18._05._2026.Migrations
 {
     /// <inheritdoc />
-    public partial class newdb : Migration
+    public partial class NewDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,6 +37,7 @@ namespace MyProject18._05._2026.Migrations
                     Age = table.Column<int>(type: "int", nullable: false),
                     Position = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     RangeId = table.Column<int>(type: "int", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     isDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
